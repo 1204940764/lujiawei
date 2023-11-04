@@ -1,156 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <title>i熊er网</title>
-      <style>
-          body{
-              background:black;background: url(../images/bg1.jpg);background-size:cover;background-attachment:fixed;background-repeat:repeat-x;
-              
-          }
-          p{color:black;text-shadow: 0px 0px 4px red}
-          table{color:black;text-shadow: 0px 0px 4px red}
-          h1{color:black;text-shadow: 0px 0px 4px red}
-          h2{color:black;text-shadow: 0px 0px 4px red}
-          h3{color:black;text-shadow: 0px 0px 4px red}
-          h4{color:black;text-shadow: 0px 0px 4px red}
-          h5{color:black;text-shadow: 0px 0px 4px red}
-          h6{color:black;text-shadow: 0px 0px 4px red}
-          li{color:black;}
-          a{color:black;text-shadow: 5px 5px 4px red}
-          .botton
-          {
-              width:300px;height: 150px;font-size: 30px;background-color:deepskyblue;border:10px solid gold;text-shadow: 0px 0px 4px red;
-          }
-          .main {
- display: flex;
- justify-content: center;
-}
-.btn {
- width: 200px;
- height: 100px;
- font-size: 30px;
- text-shadow: 0px 0px 4px red;
- background:deepskyblue;
- border-radius: 30px;
- color: #000;
- outline: none;
- cursor: pointer;
- transition: all 0.4s;
-}
-.btn:hover {
- box-shadow: inset 0 0 0 4px #ef476f, 
-              inset 0 0 0 8px #ffd166, 
-              inset 0 0 0 12px #06d6a0,
-              inset 0 0 0 16px #118ab2;
- background: #073b4c;
- color: #fff;
-}
-.thetop
-{
-    color:#680000;
-    letter-spacing: 20px;
-    font-size:40px;
-    position:sticky;
-    top:0;
-    text-shadow: 0px 0px 10px #3333FF;
-}
-.thetop:hover
-{
-    font-size:50px;
-    text-shadow: 0px 0px 10px gold;
-}
-      </style>
-      <script>
-    function myFunction() {
-        alert("i熊er的成员多了你一个\ni熊er一定会非常开心的!");
-    }
-    </script>
-    <script>
-	function clickCounter() {
-		if(typeof(Storage)!=="undefined") {
-			if (sessionStorage.clickcount) {
-				sessionStorage.clickcount=Number(sessionStorage.clickcount)+1;
-			}
-			else {
-				sessionStorage.clickcount=1;
-			}
-			document.getElementById("result").innerHTML=" 你已经i熊er " + sessionStorage.clickcount + " 下了 ";
-		} else {
-			document.getElementById("result").innerHTML="对不起，您的浏览器不支持 web 存储。";
-		}
-	}
-</script>
-  </head>
-  <body>
-        <center>
-            <p class="thetop">你i熊er吗?&nbsp&nbsp&nbsp&nbsp你i熊er吗?&nbsp&nbsp&nbsp&nbsp你i熊er吗?</p>
-          <p><button onclick="clickCounter()" type="button" class="btn">点我i个熊er1</button></p>
-	<div id="result"></div>
-	<p style="font-size: 30px;letter-spacing: 20px;color: :#680000;">点击该按钮查看i熊er的次数</p>
-      <button type="button" style="border-radius:10px;width: 100%;height: 200px;border:10px double gold;background-color:rgba(0,255,255,0.5);"><a href="../images/bg.jpg"style="text-decoration:none"><big><p style="color::#680000;letter-spacing: 150px;font-size: 50px;"><b>i熊er</b>之家!</p></big></a></button>
-  <form action="https://5b0988e595225.cdn.sohucs.com/images/20171208/2686429581ca4916bb4754307a9e68e5.jpeg">
-  <fieldset style="height: 525px;color::#680000;border: 10px double gold;">
-      <legend style="font-size: 30px;letter-spacing: 20px;text-shadow: 5px 5px 4px red"><b>i熊er之家的选择</b></legend>
-      <p style="color: :#680000;font-size :40px;letter-spacing: 20px;">你i熊er吗?</p><br>
-      <p style="color: :#680000;font-size :40px;">A.<input type="radio" name="sex" size="20">爱&nbsp&nbsp
-      B.<input type="radio" name="sex" size="20">很爱&nbsp&nbsp
-      C.<input type="radio" name="sex" size="20">超级爱&nbsp&nbsp
-      D.<input type="radio" name="sex" size="20" checked="chected">宇宙第一爱</p><br><br>
-      <input type="button" onclick="myFunction()" value="点击提交i个熊er" class="botton" >
-      </fieldset>
-  </form>
-  <br>
-  <video width="60%" style="border: 10px solid gold;" controls loop autoplay>
-		<source src="//static.nowcoder.com/tutorial/web-examples/video/movie.mp4" type="video/mp4">
-		你的浏览器太老啦!!!该更新了。
-	</video>
-  <hr color="red">
-  <table border="10" style="border-color: gold;width: 100%;height: 300px;margin-top: 0;font-size: 40px;color: :#680000;border-spacing:10px">
-    <tr>
-        <td><center>超级i熊er</center></td>
-        <td><center>超级i同er</center></td>
-    </tr>
-    <tr>
-        <td><center>超级i贤er</center></td>
-        <td><center>超级i俊er</center></td>
-    </tr>
-</table>
-      <p id="demo"style="font-size:50px;letter-spacing:30px;color: :#680000;">点击按钮获取您当前坐标:</p>
-	<button onclick="getLocation()"style="width: 200px;height: 100px;font-size:30px;background:none;color::#680000;border:3px solid gold">有种点我</button>
-	<script>
-		var x = document.getElementById("demo")
-		function getLocation() {
-			if (navigator.geolocation) {
-				navigator.geolocation.getCurrentPosition(showPosition);
-			} else {
-				x.innerHTML = "该浏览器不支持获取地理位置。";
-			}
-		}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        html,body{
+            margin:0px;
+            width:100%;
+            height:100%;
+            overflow:hidden;
+            background:#000;
+        }
 
-		function showPosition(position) {
-			x.innerHTML = "纬度: " + position.coords.latitude +
-				"<br>经度: " + position.coords.longitude;
-		}
-	</script>
-      <hr color="orange">
-      <a href="https://419d2e19-preview.lightly.teamcode.com/HTMLProject/js/ikun的诗.html?server=preview&dcsId=419d2e19&token=KiN9MfSYRt2N8-oBvLoAoQ"target="_blank"><p style="font-size:50px;color::#680000;letter-spacing: 30px;">点击阅读真i粉诗句</p></a>
-      <hr color="yellow">
-      <a href="https://corestudi0.github.io/newyear/#1673101386906"><big><p style="font-size:50px;letter-spacing:150px;color: :#680000;">新年快乐！</p></big></a>
-      <hr color="green">
-      <li><p style="font-size:50px;letter-spacing:50px;color: black;">hello 2023!</p></li>
-      <hr color="blue">
-      <h4 style="font-size:50px;letter-spacing:50px;color::#680000;">good bye 2022</h4>
-      <hr color="indigo">
-      
-      <a href="https://xqimg.imedao.com/1766a082f0f40973fc577bf4.gif%21raw.gif"><p style="font-size: 70px;color: :#680000;">点击直接燃起来</p></a> 
-      <hr color="purple">
-      <a href="https://www.bilibili.com/bangumi/play/ep312861?theme=movie&spm_id_from=333.337.0.0"target="_blank"><img src="https://cdn.bapiw.com/wp-content/uploads/jp/2013-01-01/8864.jpg"style="border:10px double gold"/></a>
-      <br>
-      </br>
-      <!--超链接-->
-      <a href="https://www.bilibili.com/video/BV1j4411W7F7/?spm_id_from=333.337.search-card.all.click&vd_source=0c9d6153d2eeb450e6736bdb5971d896"target="_blank">点击收看猛男</a>
-      </br>
-      </center>
-  </body>
+        #canvas{
+            width:100%;
+            height:100%;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script type="text/javascript">
+
+    function initVars(){
+
+        pi=Math.PI;
+        ctx=canvas.getContext("2d");
+        canvas.width=canvas.clientWidth;
+        canvas.height=canvas.clientHeight;
+        cx=canvas.width/2;
+        cy=canvas.height/2;
+        playerZ=-25;
+        playerX=playerY=playerVX=playerVY=playerVZ=pitch=yaw=pitchV=yawV=0;
+        scale=600;
+        seedTimer=0;seedInterval=5,seedLife=100;gravity=.02;
+        seeds=new Array();
+        sparkPics=new Array();
+        s="https://cantelope.org/NYE/";
+        for(i=1;i<=10;++i){
+            sparkPic=new Image();
+            sparkPic.src=s+"spark"+i+".png";
+            sparkPics.push(sparkPic);
+        }
+        sparks=new Array();
+        pow1=new Audio(s+"pow1.ogg");
+        pow2=new Audio(s+"pow2.ogg");
+        pow3=new Audio(s+"pow3.ogg");
+        pow4=new Audio(s+"pow4.ogg");
+        frames = 0;
+    }
+
+    function rasterizePoint(x,y,z){
+
+        var p,d;
+        x-=playerX;
+        y-=playerY;
+        z-=playerZ;
+        p=Math.atan2(x,z);
+        d=Math.sqrt(x*x+z*z);
+        x=Math.sin(p-yaw)*d;
+        z=Math.cos(p-yaw)*d;
+        p=Math.atan2(y,z);
+        d=Math.sqrt(y*y+z*z);
+        y=Math.sin(p-pitch)*d;
+        z=Math.cos(p-pitch)*d;
+        var rx1=-1000,ry1=1,rx2=1000,ry2=1,rx3=0,ry3=0,rx4=x,ry4=z,uc=(ry4-ry3)*(rx2-rx1)-(rx4-rx3)*(ry2-ry1);
+        if(!uc) return {x:0,y:0,d:-1};
+        var ua=((rx4-rx3)*(ry1-ry3)-(ry4-ry3)*(rx1-rx3))/uc;
+        var ub=((rx2-rx1)*(ry1-ry3)-(ry2-ry1)*(rx1-rx3))/uc;
+        if(!z)z=.000000001;
+        if(ua>0&&ua<1&&ub>0&&ub<1){
+            return {
+                x:cx+(rx1+ua*(rx2-rx1))*scale,
+                y:cy+y/z*scale,
+                d:Math.sqrt(x*x+y*y+z*z)
+            };
+        }else{
+            return {
+                x:cx+(rx1+ua*(rx2-rx1))*scale,
+                y:cy+y/z*scale,
+                d:-1
+            };
+        }
+    }
+
+    function spawnSeed(){
+
+        seed=new Object();
+        seed.x=-50+Math.random()*100;
+        seed.y=25;
+        seed.z=-50+Math.random()*100;
+        seed.vx=.1-Math.random()*.2;
+        seed.vy=-1.5;//*(1+Math.random()/2);
+        seed.vz=.1-Math.random()*.2;
+        seed.born=frames;
+        seeds.push(seed);
+    }
+
+    function splode(x,y,z){
+
+        t=5+parseInt(Math.random()*150);
+        sparkV=1+Math.random()*2.5;
+        type=parseInt(Math.random()*3);
+        switch(type){
+            case 0:
+                pic1=parseInt(Math.random()*10);
+                break;
+            case 1:
+                pic1=parseInt(Math.random()*10);
+                do{ pic2=parseInt(Math.random()*10); }while(pic2==pic1);
+                break;
+            case 2:
+                pic1=parseInt(Math.random()*10);
+                do{ pic2=parseInt(Math.random()*10); }while(pic2==pic1);
+                do{ pic3=parseInt(Math.random()*10); }while(pic3==pic1 || pic3==pic2);
+                break;
+        }
+        for(m=1;m<t;++m){
+            spark=new Object();
+            spark.x=x; spark.y=y; spark.z=z;
+            p1=pi*2*Math.random();
+            p2=pi*Math.random();
+            v=sparkV*(1+Math.random()/6)
+            spark.vx=Math.sin(p1)*Math.sin(p2)*v;
+            spark.vz=Math.cos(p1)*Math.sin(p2)*v;
+            spark.vy=Math.cos(p2)*v;
+            switch(type){
+                case 0: spark.img=sparkPics[pic1]; break;
+                case 1:
+                    spark.img=sparkPics[parseInt(Math.random()*2)?pic1:pic2];
+                    break;
+                case 2:
+                    switch(parseInt(Math.random()*3)){
+                        case 0: spark.img=sparkPics[pic1]; break;
+                        case 1: spark.img=sparkPics[pic2]; break;
+                        case 2: spark.img=sparkPics[pic3]; break;
+                    }
+                    break;
+            }
+            spark.radius=25+Math.random()*50;
+            spark.alpha=1;
+            spark.trail=new Array();
+            sparks.push(spark);
+        }
+        switch(parseInt(Math.random()*4)){
+            case 0:	pow=new Audio(s+"pow1.ogg"); break;
+            case 1:	pow=new Audio(s+"pow2.ogg"); break;
+            case 2:	pow=new Audio(s+"pow3.ogg"); break;
+            case 3:	pow=new Audio(s+"pow4.ogg"); break;
+        }
+        d=Math.sqrt((x-playerX)*(x-playerX)+(y-playerY)*(y-playerY)+(z-playerZ)*(z-playerZ));
+        pow.volume=1.5/(1+d/10);
+        pow.play();
+    }
+
+    function doLogic(){
+
+        if(seedTimer<frames){
+            seedTimer=frames+seedInterval*Math.random()*10;
+            spawnSeed();
+        }
+        for(i=0;i<seeds.length;++i){
+            seeds[i].vy+=gravity;
+            seeds[i].x+=seeds[i].vx;
+            seeds[i].y+=seeds[i].vy;
+            seeds[i].z+=seeds[i].vz;
+            if(frames-seeds[i].born>seedLife){
+                splode(seeds[i].x,seeds[i].y,seeds[i].z);
+                seeds.splice(i,1);
+            }
+        }
+        for(i=0;i<sparks.length;++i){
+            if(sparks[i].alpha>0 && sparks[i].radius>5){
+                sparks[i].alpha-=.01;
+                sparks[i].radius/=1.02;
+                sparks[i].vy+=gravity;
+                point=new Object();
+                point.x=sparks[i].x;
+                point.y=sparks[i].y;
+                point.z=sparks[i].z;
+                if(sparks[i].trail.length){
+                    x=sparks[i].trail[sparks[i].trail.length-1].x;
+                    y=sparks[i].trail[sparks[i].trail.length-1].y;
+                    z=sparks[i].trail[sparks[i].trail.length-1].z;
+                    d=((point.x-x)*(point.x-x)+(point.y-y)*(point.y-y)+(point.z-z)*(point.z-z));
+                    if(d>9){
+                        sparks[i].trail.push(point);
+                    }
+                }else{
+                    sparks[i].trail.push(point);
+                }
+                if(sparks[i].trail.length>5)sparks[i].trail.splice(0,1);
+                sparks[i].x+=sparks[i].vx;
+                sparks[i].y+=sparks[i].vy;
+                sparks[i].z+=sparks[i].vz;
+                sparks[i].vx/=1.075;
+                sparks[i].vy/=1.075;
+                sparks[i].vz/=1.075;
+            }else{
+                sparks.splice(i,1);
+            }
+        }
+        p=Math.atan2(playerX,playerZ);
+        d=Math.sqrt(playerX*playerX+playerZ*playerZ);
+        d+=Math.sin(frames/80)/1.25;
+        t=Math.sin(frames/200)/40;
+        playerX=Math.sin(p+t)*d;
+        playerZ=Math.cos(p+t)*d;
+        yaw=pi+p+t;
+    }
+
+    function rgb(col){
+
+        var r = parseInt((.5+Math.sin(col)*.5)*16);
+        var g = parseInt((.5+Math.cos(col)*.5)*16);
+        var b = parseInt((.5-Math.sin(col)*.5)*16);
+        return "#"+r.toString(16)+g.toString(16)+b.toString(16);
+    }
+
+    function draw(){
+
+        ctx.clearRect(0,0,cx*2,cy*2);
+
+        ctx.fillStyle="#ff8";
+        for(i=-100;i<100;i+=3){
+            for(j=-100;j<100;j+=4){
+                x=i;z=j;y=25;
+                point=rasterizePoint(x,y,z);
+                if(point.d!=-1){
+                    size=250/(1+point.d);
+                    d = Math.sqrt(x * x + z * z);
+                    a = 0.75 - Math.pow(d / 100, 6) * 0.75;
+                    if(a>0){
+                        ctx.globalAlpha = a;
+                        ctx.fillRect(point.x-size/2,point.y-size/2,size,size);
+                    }
+                }
+            }
+        }
+        ctx.globalAlpha=1;
+        for(i=0;i<seeds.length;++i){
+            point=rasterizePoint(seeds[i].x,seeds[i].y,seeds[i].z);
+            if(point.d!=-1){
+                size=200/(1+point.d);
+                ctx.fillRect(point.x-size/2,point.y-size/2,size,size);
+            }
+        }
+        point1=new Object();
+        for(i=0;i<sparks.length;++i){
+            point=rasterizePoint(sparks[i].x,sparks[i].y,sparks[i].z);
+            if(point.d!=-1){
+                size=sparks[i].radius*200/(1+point.d);
+                if(sparks[i].alpha<0)sparks[i].alpha=0;
+                if(sparks[i].trail.length){
+                    point1.x=point.x;
+                    point1.y=point.y;
+                    switch(sparks[i].img){
+                        case sparkPics[0]:ctx.strokeStyle="#f84";break;
+                        case sparkPics[1]:ctx.strokeStyle="#84f";break;
+                        case sparkPics[2]:ctx.strokeStyle="#8ff";break;
+                        case sparkPics[3]:ctx.strokeStyle="#fff";break;
+                        case sparkPics[4]:ctx.strokeStyle="#4f8";break;
+                        case sparkPics[5]:ctx.strokeStyle="#f44";break;
+                        case sparkPics[6]:ctx.strokeStyle="#f84";break;
+                        case sparkPics[7]:ctx.strokeStyle="#84f";break;
+                        case sparkPics[8]:ctx.strokeStyle="#fff";break;
+                        case sparkPics[9]:ctx.strokeStyle="#44f";break;
+                    }
+                    for(j=sparks[i].trail.length-1;j>=0;--j){
+                        point2=rasterizePoint(sparks[i].trail[j].x,sparks[i].trail[j].y,sparks[i].trail[j].z);
+                        if(point2.d!=-1){
+                            ctx.globalAlpha=j/sparks[i].trail.length*sparks[i].alpha/2;
+                            ctx.beginPath();
+                            ctx.moveTo(point1.x,point1.y);
+                            ctx.lineWidth=1+sparks[i].radius*10/(sparks[i].trail.length-j)/(1+point2.d);
+                            ctx.lineTo(point2.x,point2.y);
+                            ctx.stroke();
+                            point1.x=point2.x;
+                            point1.y=point2.y;
+                        }
+                    }
+                }
+                ctx.globalAlpha=sparks[i].alpha;
+                ctx.drawImage(sparks[i].img,point.x-size/2,point.y-size/2,size,size);
+            }
+        }
+    }
+
+    function frame(){
+
+        if(frames>100000){
+            seedTimer=0;
+            frames=0;
+        }
+        frames++;
+        draw();
+        doLogic();
+        requestAnimationFrame(frame);
+    }
+
+    window.addEventListener("resize",()=>{
+        canvas.width=canvas.clientWidth;
+        canvas.height=canvas.clientHeight;
+        cx=canvas.width/2;
+        cy=canvas.height/2;
+    });
+
+    initVars();
+    frame();
+
+
+</script>
+</body>
 </html>
